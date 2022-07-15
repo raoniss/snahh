@@ -1,0 +1,9 @@
+<%- include('../header') %> 
+    <% pays.forEach(pays => { %>
+        <h1><%- pays.Py_nom %> </h1>
+        <a href="/pays/modifier/<%- pays.idPays %> ">modifier</a>
+        <a href="/pays/supprimer/<%- pays.idPays %> ">supprimer</a>
+    <% }) %>
+    <a href="/pays/ajoute">ajouter</a>
+    
+<%- include('../footer') %> 
