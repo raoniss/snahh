@@ -1,8 +1,12 @@
-class categorie{
+class Categorie{
     constructor(categorie){
         this.categorie = categorie
     }
-    get id(){
-        this.id = id
+    get idCategorie(){
+        return this.categorie.idCategorie
+    }
+    get Cat_nom(){
+        return this.categorie.Cat_nom
     }
 }
+module.exports = Categorie

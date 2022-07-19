@@ -1,18 +1,9 @@
-const con = require('../config/db')
 const conn = require('../config/db')
 const Pays = require('../models/pays')
 
 
 
-//la liste de tous les pays dans la base de donne
-const liste =  (req,res)=>{
-    con.query('SELECT * FROM Pays',(err,rep)=>{
-        if(err)throw err
-        else{
-            res.render('pays/index',{pays : rep.map(pays => new Pays(pays))})
-        }
-    })
-}
+
 
 
 //l'ajout des nouveau pays dans la base de donne
@@ -34,7 +25,7 @@ const ajoute_get = (req,res)=>{
 
 //suppression des pays dans la base de donne
 const supprimer =  (req,res)=>{
-    con.query('DELETE FROM Pays WHERE idPays = ?',[[req.params.id]],(err,rep)=>{
+    conn.query('DELETE FROM Pays WHERE idPays = ?',[[req.params.id]],(err,rep)=>{
         if(err)throw err
         else{
             res.redirect('/pays/')
@@ -45,7 +36,7 @@ const supprimer =  (req,res)=>{
 
 //redirection vers le formulaire de modification
 const modifier_get = (req,res)=>{
-    con.query('SELECT * FROM Pays WHERE idPays = ?',[[req.params.id]],(err,rep)=>{
+    conn.query('SELECT * FROM Pays WHERE idPays = ?',[[req.params.id]],(err,rep)=>{
         if(err)throw err
         else{
             res.render('pays/pays_formulaire_modif',{pays : rep.map(pays => new Pays(pays))})
@@ -60,6 +51,17 @@ const modifier = (req,res)=>{
         if (err)throw err
         else{
             res.redirect('/pays/')
+        }
+    })
+}
+
+
+//la liste de tous les pays dans la base de donne
+const liste =  (req,res)=>{
+    conn.query('SELECT * FROM Pays',(err,rep)=>{
+        if(err)throw err
+        else{
+            res.render('pays/index',{pays : rep.map(pays => new Pays(pays))})
         }
     })
 }
