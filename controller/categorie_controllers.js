@@ -56,6 +56,17 @@ const lister = (req,res)=>{
     })
 }
 
+const liste = (cb)=>{
+    conn.query('SELECT * FROM Categorie',(err,rep)=>{
+        if (err)throw err
+        else{   
+            let categorie = rep.map(categorie => new Categorie(categorie))
+            cb(categorie)
+        }
+    })
+}
+
+
 
 
 
@@ -66,5 +77,6 @@ module.exports = {
     modifier,
     modifier_get,
     supprimer,
-    lister
+    lister,
+    liste
 }

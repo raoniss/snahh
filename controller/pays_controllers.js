@@ -66,9 +66,20 @@ const liste =  (req,res)=>{
     })
 }
 
+const lister =  (cb)=>{
+    conn.query('SELECT * FROM Pays',(err,rep)=>{
+        if(err)throw err
+        else{
+            pays = rep.map(pays => new Pays(pays))
+            cb(pays)
+        }
+    })
+}
+
 
 module.exports={
     liste,
+    lister,
     ajoute,
     ajoute_get,
     supprimer,

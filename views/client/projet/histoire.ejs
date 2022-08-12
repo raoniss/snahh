@@ -1,0 +1,27 @@
+<%- include('../../inc/headerstart') %>
+<!--formulaire-->
+<div class="container_start">
+    <div class="presentation">
+        <p class="gras">Fiates les voyager</p>
+        <p>Donner leur envie de vous soutenir</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae quos distinctio labore laboriosam eius modi magni animi harum, sit, iusto pariatur nihil in hic iure id tempora voluptatum consectetur?</p>
+    </div>
+    <div class="ligne">
+        <div id="editeur">
+        </div>
+    </div>
+    <a class="button" id="suivant" href="/projet/create/equipe">suivant</a>
+</div>
+<script src="/assets/js/ckeditor5/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editeur'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+<!--formulaire-->
+<%- include('../../inc/footer') %>

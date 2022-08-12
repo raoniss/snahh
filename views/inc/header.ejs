@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/image/img/icone.png" type="image/x-icon">
+    <title>S'nah</title>
+    <link rel="stylesheet"  href="/assets/css/mycrt/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar_back"></div>
+        <nav class="navbar">
+            <div>
+                <a href="">DECOUVRIR S'NAHH</a>
+                <a href="/projet/">LANCER UN PROJET</a>
+            </div>
+            <div>
+                <a href="/">LOGO</a>
+            </div>
+            <div>
+                <input type="text" placeholder="recherche">
+            </div>
+            <% if (locals.user !== undefined) { %>
+                <div>
+                    <a href="/profil/"><%= user.nom %> </a>
+                </div>
+            <% } else { %>
+                <div>
+                    <a href="/signin/">CONNEXION</a>
+                </div>
+            <% } %> 
+             
+        </nav>
+    

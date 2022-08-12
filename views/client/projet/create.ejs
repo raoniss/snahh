@@ -1,0 +1,123 @@
+<%- include('../../inc/headerstart') %>
+<!--formulaire-->
+<form class="container_start">
+    <div class="presentation">
+        <p class="gras">Commencons par les bases de vortre projet</p>
+        <p>Donnez toutes les informations sur votre projet pour vous faire mieux comprendre </p>
+    </div>
+    <div class="ligne">
+        <div class="text">
+            <p class="gras">TITRE</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat quia ea repellendus,
+                assumenda tenetur esse amet doloremque reprehenderit corrupti ut sunt asperiores, non aspernatur omnis a
+                fugiat maxime voluptates.</p>
+        </div>
+        <div class="form_start">
+            <div class="form">
+                <div>
+                    <p class="gras">TITRE</p>
+                    <input type="text" name="titre" placeholder="">
+                </div>
+                <div>
+                    <p class="gras">DESCRIPTION</p>
+                    <textarea name="description" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ligne">
+        <div class="text">
+            <p class="gras">IMAGE</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat quia ea repellendus,
+                assumenda tenetur esse amet doloremque reprehenderit corrupti ut sunt asperiores, non aspernatur omnis a
+                fugiat maxime voluptates.</p>
+        </div>
+        <div class="form_start">
+            <div class="formp">
+                <div class="preview pr">
+                    <div id="photo">
+                        <label for="profile_pic"><div>Sélectionnez le fichier à utiliser</div></label>
+                        <input class="photo" type="file" id="profile_pic" name="photo" accept=".jpg, .jpeg, .png">
+                    </div>
+
+                    <p>Aucun fichier sélectionné pour le moment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ligne">
+        <div class="text">
+            <p class="gras">VIDEO</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat quia ea repellendus,
+                assumenda tenetur esse amet doloremque reprehenderit corrupti ut sunt asperiores, non aspernatur omnis a
+                fugiat maxime voluptates.</p>
+        </div>
+        <div class="form_start">
+            <div class="formp">
+                <div class="previews pr">
+                    <div id="video">
+                        <label for="profile_vid"><div>Sélectionnez le fichier à utiliser</div></label>
+                        <input class="video" type="file" id="profile_vid" name="video" accept="video/*">
+                    </div>
+
+                    <p>Aucun fichier sélectionné pour le moment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ligne">
+        <div class="text">
+            <p class="gras">DATE DE LANCEMENT</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat quia ea repellendus,
+                assumenda tenetur esse amet doloremque reprehenderit corrupti ut sunt asperiores, non aspernatur omnis a
+                fugiat maxime voluptates.</p>
+        </div>
+        <div class="form_start">
+            <div class="form">
+                <div>
+                    <p class="gras">DATE</p>
+                    <input type="date" name="titre" placeholder="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ligne">
+        <div class="text">
+            <p class="gras">DUREE DE LA CAMPAGNE</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat quia ea repellendus,
+                assumenda tenetur esse amet doloremque reprehenderit corrupti ut sunt asperiores, non aspernatur omnis a
+                fugiat maxime voluptates.</p>
+        </div>
+        <div class="form_start">
+            <div class="form">
+                <div>
+                    <p class="gras">DUREE</p>
+                    <input class="duree" type="number" name="titre" placeholder="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ligne">
+        <div class="text">
+            <p class="gras">OBJECTIF DE FINANCEMENT</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat quia ea repellendus,
+                assumenda tenetur esse amet doloremque reprehenderit corrupti ut sunt asperiores, non aspernatur omnis a
+                fugiat maxime voluptates.</p>
+        </div>
+        <div class="form_start">
+            <div class="form">
+                <div>
+                    <p class="gras">OBJECTIF DE FINANCEMENT</p>
+                    <input type="number" name="titre" placeholder="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="button" id="suivant" href="/projet/create/recompense">
+        <p>suivant</p>
+    </a>
+</form>
+<script src="/assets/js/ajout_photo.js"></script>
+<script src="/assets/js/ajout_video.js"></script>
+<!--formulaire-->
+<%- include('../../inc/footer') %>

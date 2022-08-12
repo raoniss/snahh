@@ -1,7 +1,6 @@
 const conn = require("../config/db");
 const Utilisateur = require("../models/utilisateur");
-
-
+const Pays = require('../controller/pays_controllers')
 
 //ajout d'un utilisateur
 const ajouter = (req,res)=>{
@@ -49,13 +48,16 @@ const supprimer = (req,res)=>{
     })
 }
 
-
-//lister les utilisateurs
+//lister les utilisateursconsole.log(pays)
 const lister = (req,res)=>{
     conn.query('SELECT * FROM Utilisateur',(err,rep)=>{
         if(err) throw err
         else{
-            res.render('user/index',{user : rep.map(user => new Utilisateur(user))})
+            Pays.lister((pays)=>{
+                res.render('user/index',{
+                    user : rep.map(user => new Utilisateur(user)),
+                        pays : pays})
+            })
         }
     })
 }

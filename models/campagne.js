@@ -8,12 +8,12 @@ class Campagne{
         return this.campagne.idCampagne
     }
 
-    get Cp_matricle(){
-        return this.campagne.Cp_matricle
+    get Cp_matricule(){
+        return this.campagne.Cp_matricule
     }
 
-    get Cp_montant(){
-        return this.campagne.Cp_montant
+    get Cp_montant_recuperes(){
+        return this.campagne.Cp_montant_recuperes
     }
 
     get Cp_date_debut(){
@@ -48,3 +48,8 @@ class Campagne{
         return this.campagne.Cp_projet
     }
 }
+
+
+
+
+module.exports = Campagne
